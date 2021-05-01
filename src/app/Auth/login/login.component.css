@@ -1,0 +1,27 @@
+.container{
+    height: 100vh;
+}
+.box{
+    width: 350px;
+    height: 350px;
+    background-color: bisque;
+    border: 2px solid;
+    border-radius: 13px;
+}
+.headbox{
+    text-align: center;
+}
+h2{
+    margin-bottom:0;
+}
+input[type=text]{
+    width: 65%;
+    padding: 2px 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.button-container{
+    padding: 10px;
+    width: 100%;
+}

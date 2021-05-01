@@ -1,0 +1,61 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+    <div class="container profile">
+        <div class="img-container" fxLayout fxLayoutAlign="center">
+        </div>
+        <mat-icon class="edit" (click)="openEditDialog()">edit</mat-icon>
+        <div class="circle"></div>
+        <div fxLayout="row" fxLayoutAlign="space-between">
+            <div fxLayout="column">
+                <span class="name"> {{member?.firstName +" "+ member?.lastName | titlecase}} </span> 
+                <span class="left-span degree">{{ member?.degree }}</span>
+                <span class="left-span"> {{ member?.currentPlace }} </span>
+                
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center center" class="right-side">
+                <span>{{ member?.degree }}</span>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container about">
+        <div class="inner">
+            <h3>Hakkında</h3>
+            <p>{{member?.about}}</p>
+        </div>
+    </div>
+    <div class="container view">
+        <div class="inner">
+            <h3>Tablonuz</h3>
+            <h4>Size özel</h4>
+            <div fxLayout="row" fxLayoutAlign="center" class="views">
+                <div class="box" fxFlex>
+                    <div fxLayout="column" class="inner">
+                        <span class="number">{{member?.view}}</span>
+                        <span class="text">Profilinizi kimler görüntüledi</span>
+                    </div>
+                </div>
+                <div class="box" fxFlex>
+                    <div fxLayout="column" class="inner">
+                        <span  class="number">{{member?.view}}</span>
+                        <span class="text">Gönderi görüntülenmesi</span>
+                    </div>
+                </div>
+                <div class="box box-last" fxFlex>
+                    <div fxLayout="column" class="inner">
+                        <span  class="number">{{member?.view}}</span>
+                        <span class="text">Arama görüntülenmesi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container exp-edu">
+        <app-experience></app-experience>
+        <hr/>
+        <app-education></app-education>
+    </div>
+    <div class="container skill">
+        <app-skill></app-skill>
+    </div>
+</div>

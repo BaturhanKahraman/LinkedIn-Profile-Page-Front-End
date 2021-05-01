@@ -1,0 +1,124 @@
+.container{
+    width: 782px;
+    background-color: white;
+    border-radius: 10px;
+    border:1px solid rgba(0, 0,0,0.1)
+}
+.profile {
+  margin-top: 10px;
+  padding-bottom: 8px;
+}
+.edit{
+    float: right;
+    margin-right: 10px;
+}
+.edit:hover{
+    color: #0a66c2;
+    cursor:pointer;
+}
+.img-container {
+  z-index: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative; 
+  background-image: url("../../assets/img/boring-background-image-3.jpg");
+  background-repeat: no-repeat;
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  height: 200px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 152px;
+  height: 152px;
+  background-color: gray;
+  margin-left: 15px;
+  margin-top: -70px;
+  z-index: 2;
+  position: relative;
+}
+
+.name {
+  margin: 10px 18px;
+  font-size: 24px;
+  line-height: 1.33333;
+  display: inline;
+  font-weight: 400;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.left-span {
+  margin-left: 20px;
+}
+
+.degree {
+  font-size: 18px;
+}
+
+.right-side {
+  margin: 10px;
+}
+
+.about{
+    margin-top:10px;
+}
+.inner{
+    padding: 15px;
+}
+
+.inner h3{
+    margin: 0;
+    margin-bottom: 5px;
+}
+.inner h4{
+    font-style: italic;
+    color: gray;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.view{
+    margin-top: 10px;
+    background-color: #DCE6F1 !important;
+    border:1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+}
+.views{
+    border-radius: 10px;
+    background-color: white;
+    height: 100px;
+}
+.box{
+    margin:3px;
+    height: 95px;
+    background-color: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.box-last{
+    border:none
+}
+.box div .number{
+    color:#0a66c2;
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 200;
+}
+.box div .text{
+    margin-top:3px;
+    font-size: 14px;
+    line-height: 1.42857;
+    font-weight: 400;
+}
+
+.exp-edu{
+    margin-top:15px;
+    
+}
+
+.skill{
+    margin:10px 0;
+    
+}

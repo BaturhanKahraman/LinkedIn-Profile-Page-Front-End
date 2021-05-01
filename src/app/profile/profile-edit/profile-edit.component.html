@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>Profilinizi düzenleyin</h1>
+<mat-dialog-content class="content">
+  <form fxLayout="column" fxLayoutAlign="5px" [formGroup]="profileEditForm">
+    <div fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="10px">
+      <mat-form-field appearance="legacy">
+        <mat-label>İsminiz </mat-label>
+        <input matInput placeholder="Lütfen isminizi girin" formControlName="name">
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>Soyisminiz </mat-label>
+        <input matInput placeholder="Lütfen soyisminizi girin" formControlName="surname">
+      </mat-form-field>
+    </div>
+    <mat-form-field appearance="legacy">
+      <mat-label>Ünvan </mat-label>
+      <input matInput placeholder="Lütfen Ünvan girin" formControlName="degree">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Hakkınızda </mat-label>
+      <textarea matInput placeholder="Lütfen Hakkınızda girin" formControlName="about"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Bulunduğunuz şehir ve Ülke </mat-label>
+      <input matInput placeholder="Bulunduğunuz şehir ve Ülke" formControlName="currentPlace">
+    </mat-form-field>
+  </form>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Çık</button>
+  <button mat-button [disabled]="!profileEditForm.valid" (click)="updateProfile()" mat-dialog-close>Düzenle</button>
+</mat-dialog-actions>

@@ -1,0 +1,21 @@
+<div class="container" fxLayout="column" fxLayoutAlign="center center">
+  <div class="box" fxLayout="column" fxLayoutGap="2px" fxLayoutAlign="space-between center">
+    <div class="headbox" fxLayout="column" fxLayoutAlign="center">
+      <h2>Giriş Yapın</h2>
+    </div>
+    <form fxLayout="column" fxLayoutAlign="center center" [formGroup]="loginForm">
+      <mat-form-field appearance="legacy">
+        <mat-label>E-posta Adresiniz</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>Şifreniz</mat-label>
+        <input matInput placeholder="Şifre" type="password" formControlName="password">
+      </mat-form-field>
+    </form>
+    <div class="button-container" fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="3px">
+      <button mat-raised-button routerLink="/register"> <-Kayıt Ol </button>
+      <button mat-raised-button color="primary" [disabled]="!loginForm.valid" (click)="login()">Giriş Yap</button>
+    </div>
+  </div>
+</div>

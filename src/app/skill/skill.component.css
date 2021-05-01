@@ -1,0 +1,15 @@
+.inner{
+    padding: 15px;
+}
+
+.inner h3{
+    margin: 0;
+    margin-bottom: 5px;
+}
+.inner h4{
+    font-style: italic;
+    color: gray;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 5px;
+}

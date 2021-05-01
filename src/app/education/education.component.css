@@ -1,0 +1,31 @@
+.edu-inner{
+    padding: 24px 24px 0;
+}
+.edu-inner h2{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+.edu-inner .edu{
+    padding: 20px 72px 0 0px;
+    display: block;
+}
+.edu h3{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+.edu place{
+    font-size: 14px;
+}
+.edu div .start-date{
+    color: rgba(0, 0, 0, 0.5);
+}
+.edu div .end-date{
+    color: rgba(0, 0, 0, 0.5);
+    
+}
