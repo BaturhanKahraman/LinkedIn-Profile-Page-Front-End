@@ -23,7 +23,7 @@
         </form>
       <div class="button-container" fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="3px">
         <button mat-raised-button routerLink="/login"> <-Giriş Yap </button>
-        <button mat-raised-button color="primary" >Giriş Yap</button>
+        <button mat-raised-button color="primary" [disabled]="!registerForm.valid" (click)="Register()">Kayıt Ol</button>
       </div>
     </div>
   </div>

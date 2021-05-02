@@ -1,4 +1,29 @@
 <div class="inner">
-    <h3>Yetenekler</h3>
-    <p>Buraya tüm yetenekleriniz gelecek</p>
+    <div fxLayout="row" fxLayoutAlign="space-between">
+        <h3>Yetenekler</h3>
+        <mat-icon class="add" (click)="addMode=!addMode">{{addMode?"close":"add"}}</mat-icon>
+    </div>
+
+    <div *ngIf="skills?.length==0">Henüz yetenek eklememişsiniz. </div>
+    <div *ngIf="skills?.length>0">
+        <span class="chips" *ngFor="let skill of skills">{{skill.name}}</span>
+    </div>
+    <div *ngIf="addMode" >
+      <mat-form-field class="chip-list">
+        <mat-label>Yetenekleriniz</mat-label>
+        <mat-chip-list #chipList aria-label="Fruit selection">
+          <mat-chip *ngFor="let skill of skills" [selectable]="selectable"
+                   [removable]="removable" (removed)="remove(skill)">
+            {{skill.name}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="Yeni Yetenek Ekleyin"
+                 [matChipInputFor]="chipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="saveSkills()">Kaydet </button>
+    </div>
 </div>

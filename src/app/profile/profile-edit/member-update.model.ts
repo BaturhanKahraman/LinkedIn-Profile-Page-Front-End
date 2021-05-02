@@ -5,5 +5,4 @@ export class MemberUpdateModel{
     currentPlace:string;
     degree:string;
     about:string;
-    profilePower:number;
 }

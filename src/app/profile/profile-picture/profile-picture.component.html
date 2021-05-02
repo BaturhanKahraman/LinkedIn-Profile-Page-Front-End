@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Profil fotoğrafı yükleyin</h1>
+<mat-dialog-content>
+    <div fxLayout="column" fxLayoutAlign="center" >
+        <input type="file" (change)="onSelectedFile($event)"  accept="image/png, image/jpeg, image/jpg">
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <mat-spinner diameter="40" *ngIf="loading"></mat-spinner>
+    <button mat-raised-button *ngIf="!loading" color="primary" (click)="onSubmit()">Fotoğrafı yükleyin.</button>
+
+</mat-dialog-actions>

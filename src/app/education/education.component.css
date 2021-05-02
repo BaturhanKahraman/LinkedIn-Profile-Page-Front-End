@@ -1,5 +1,16 @@
 .edu-inner{
     padding: 24px 24px 0;
+    padding-bottom: 24px;
+}
+.add{
+    float: right;
+    margin-right: 10px;
+    margin-top: -28px;
+    font-size: 32px;
+}
+.add:hover{
+    cursor: pointer;
+    color: blue;
 }
 .edu-inner h2{
     margin: 0;
@@ -28,4 +39,12 @@
 .edu div .end-date{
     color: rgba(0, 0, 0, 0.5);
     
+}
+
+.edit{
+margin-right: -65px;
+}
+.edit:hover{
+    color:blue;
+    cursor: pointer;
 }

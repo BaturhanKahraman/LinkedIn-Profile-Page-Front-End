@@ -1,5 +1,5 @@
 .inner{
-    padding: 15px;
+    padding: 19px;
 }
 
 .inner h3{
@@ -12,4 +12,21 @@
     font-weight: 400;
     margin: 0;
     margin-bottom: 5px;
+}
+.add{
+    margin-right: 15px;
+    font-size: 32px;
+}
+.add:hover{
+    cursor: pointer;
+    color: blue;
+}
+.chip-list{
+    width: 100%;
+}
+button{
+    float:right;
+}
+.chips{
+    margin-right: 5px;
 }

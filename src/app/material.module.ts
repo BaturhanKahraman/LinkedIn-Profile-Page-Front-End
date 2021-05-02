@@ -17,6 +17,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   imports: [
@@ -34,8 +37,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatSlideToggleModule,
     MatSelectModule,
     MatPaginatorModule,
-    MatSnackBarModule,
-    MatDialogModule,MatExpansionModule,MatStepperModule
+    MatSnackBarModule,MatChipsModule,
+    MatDialogModule,MatExpansionModule,MatStepperModule,MatDatepickerModule,MatProgressSpinnerModule
   ],
   exports: [
     MatSidenavModule,
@@ -52,8 +55,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatSlideToggleModule,
     MatSelectModule,
     MatPaginatorModule,
-    MatSnackBarModule,
-    MatDialogModule,MatExpansionModule,MatStepperModule
+    MatSnackBarModule,MatChipsModule,
+    MatDialogModule,MatExpansionModule,MatStepperModule,MatDatepickerModule,MatProgressSpinnerModule
   ],
 })
 export class MaterialModule {}

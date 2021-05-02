@@ -1,0 +1,35 @@
+<h1 mat-dialog-title>Eğitim {{mode==enumType.Add?"Ekleyin":"Düzenleyin"}}</h1>
+<mat-dialog-content >
+    <form fxLayout="column" fxLayoutAlign="5px" [formGroup]="addEditForm">
+          <mat-form-field appearance="legacy">
+            <mat-label>Başlık </mat-label>
+            <input matInput placeholder="Lütfen başlığı girin" formControlName="title">
+          </mat-form-field>
+          <mat-form-field appearance="legacy">
+            <mat-label>Altbaşlık </mat-label>
+            <input matInput placeholder="Lütfen Altbaşlık girin" formControlName="subtitle">
+          </mat-form-field>
+        <mat-form-field appearance="legacy">
+          <mat-label>Kurum </mat-label>
+          <input matInput placeholder="Lütfen Kurum girin" formControlName="place">
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+          <mat-label>Başlangıç Tarihi </mat-label>
+          <input matInput type="datetime-local" placeholder="Lütfen başlangıç tarihi girin" formControlName="startedDate">
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+          <mat-label>Bitiş Tarihi (varsa) </mat-label>
+          <input matInput type="datetime-local" placeholder="Lütfen bitiş tarihi girin" formControlName="endDate">
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+          <mat-label>Bulunduğunuz şehir ve Ülke </mat-label>
+          <input matInput placeholder="Bulunduğunuz şehir ve Ülke" formControlName="city">
+        </mat-form-field>
+      </form>
+    
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Çık</button>
+    <button mat-raised-button color="warn" *ngIf="mode!=enumType.Add" (click)="deleteEdu()">Sil</button>
+    <button mat-raised-button mat-dialog-close (click)="send()">{{mode==enumType.Add?"Ekle":"Düzenle"}}</button>
+</mat-dialog-actions>

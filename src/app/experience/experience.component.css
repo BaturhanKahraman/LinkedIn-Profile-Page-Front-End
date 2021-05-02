@@ -1,31 +1,54 @@
-.exp-inner{
-    padding: 24px 24px 0;
+.exp-inner {
+  padding: 24px 24px 0;
 }
-.exp-inner h2{
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    line-height: 1.4;
-    font-weight: 400;
+
+.exp-inner h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 400;
 }
-.exp-inner .exp{
-    padding: 20px 72px 0 0px;
-    display: block;
+
+.exp-inner .exp {
+  padding: 20px 72px 0 0px;
+  display: block;
 }
-.exp h3{
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 600;
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
 }
-.exp place{
-    font-size: 14px;
+
+.place {
+  font-size: 14px;
 }
-.exp div .start-date{
-    color: rgba(0, 0, 0, 0.5);
+
+.start-date {
+  color: rgba(0, 0, 0, 0.5);
 }
-.exp div .end-date{
-    color: rgba(0, 0, 0, 0.5);
-    
+
+.end-date {
+  color: rgba(0, 0, 0, 0.5);
+
+}
+
+.edit {
+  margin-right: -65px;
+}
+
+.edit:hover {
+  color: blue;
+  cursor: pointer;
+}
+.add{
+    margin-right: 9px;
+    font-size: 32px;
+}
+.add:hover{
+    cursor: pointer;
+    color: blue;
 }

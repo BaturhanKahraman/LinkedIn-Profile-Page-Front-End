@@ -1,13 +1,25 @@
 <div class="exp-inner">
-    <h2>Deneyim</h2>
-    <div class="exp" fxLayout="column">
-        <h3 fxFlex>Student</h3>
-        <span fxFlex class="place">Ankara Üniversitesi</span>
-        <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="20px">
-            <span class="start-date">Başlangıç Tarihi</span>
-            <span class="end-date">Bitiş Tarihi</span>
-        </div>
-        <span fxFlex class="city">Ankara, Türkiye</span>
+    <div fxLayout="row" fxLayoutAlign="space-between">
+        <h2>Deneyim</h2>
+        <mat-icon class="add" (click)="openDialog(mode.Add,null)">add</mat-icon>
     </div>
-    <hr />
+  <div *ngIf="!experiences" class="exp">
+    Herhangi bir deneyim eklememişsiniz!
+  </div>
+  <div *ngIf="experiences">
+    <div *ngFor="let exp of experiences" class="exp" fxLayout="column">
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <h3 fxFlex>{{exp.title}}</h3>
+        <mat-icon class="edit" (click)="openDialog(mode.Edit,exp)">edit</mat-icon>
+      </div>
+      <span fxFlex class="place">{{exp.place}}</span>
+      <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="20px">
+        <span class="start-date">{{exp.startedDate | date}}</span>
+        <span class="end-date" *ngIf="exp.endDate">{{exp.endDate | date}}</span>
+      </div>
+      <span fxFlex class="city">{{exp.city}}</span>
+      <hr/>
+    </div>
+  </div>
+
 </div>

@@ -3,7 +3,9 @@
         <div class="img-container" fxLayout fxLayoutAlign="center">
         </div>
         <mat-icon class="edit" (click)="openEditDialog()">edit</mat-icon>
-        <div class="circle"></div>
+        <div class="circle" (click)="openProfilePictureDialog()">
+            <img *ngIf="member?.profilePicturePath" [src]="address + member?.profilePicturePath" alt="">
+        </div>
         <div fxLayout="row" fxLayoutAlign="space-between">
             <div fxLayout="column">
                 <span class="name"> {{member?.firstName +" "+ member?.lastName | titlecase}} </span> 
@@ -51,11 +53,14 @@
         </div>
     </div>
     <div class="container exp-edu">
-        <app-experience></app-experience>
+        <app-experience [experiences]="member?.experiences"  [memberId]="member?.id" (statusUpdated)="refreshMember()"></app-experience>
         <hr/>
-        <app-education></app-education>
+        <app-education [educations]="member?.educations" [memberId]="member?.id" (statusUpdated)="refreshMember()"></app-education>
     </div>
     <div class="container skill">
-        <app-skill></app-skill>
+        <app-skill [skills]="member?.skills" [memberId]="member?.id" ></app-skill>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end" style="margin:10px 0px;" (click)="Logout()">
+        <button mat-raised-button color="warn">Çıkış Yap</button>
     </div>
 </div>

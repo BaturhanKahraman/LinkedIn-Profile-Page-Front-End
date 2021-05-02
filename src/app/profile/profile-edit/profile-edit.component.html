@@ -25,10 +25,10 @@
       <input matInput placeholder="Bulunduğunuz şehir ve Ülke" formControlName="currentPlace">
     </mat-form-field>
   </form>
-
 </mat-dialog-content>
+
 
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Çık</button>
-  <button mat-button [disabled]="!profileEditForm.valid" (click)="updateProfile()" mat-dialog-close>Düzenle</button>
+  <button mat-button [disabled]="!profileEditForm.valid" (click)="updateProfile()" [mat-dialog-close]="true">Düzenle</button>
 </mat-dialog-actions>

@@ -35,6 +35,9 @@ export class AuthService {
 
   autoLogin(){
     let userData = JSON.parse(localStorage.getItem("user"));
+    if(!userData){
+      return;
+    }
     const loadedUser = new User(userData.email,userData.id,userData.firstName + " " + userData.lastName);
     if(loadedUser){
       this.user.next(loadedUser);

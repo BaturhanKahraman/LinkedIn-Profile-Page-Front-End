@@ -1,13 +1,21 @@
 <div class="edu-inner">
+  
     <h2>Eğitim</h2>
-    <div class="edu" fxLayout="column">
-        <h3 fxFlex>Ünvan</h3>
-        <span fxFlex class="place">Yapılan Yer</span>
-        <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="20px">
-            <span class="start-date">Başlangıç Tarihi</span>
-            <span class="end-date">Bitiş Tarihi</span>
-        </div>
-        <span fxFlex class="city">Ankara, Türkiye</span>
+  <mat-icon class="add" (click)="openDialog(mode.Add,null)">add</mat-icon>
+  <div class="edu" *ngIf="!educations">Herhangi bir eğitim bilgisi eklememişsiniz</div>
+  <div *ngIf="educations">
+    <div *ngFor="let edu of educations" class="edu" fxLayout="column">
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <h3 fxFlex>{{edu.title}}</h3>
+        <mat-icon class="edit" (click)="openDialog(mode.Edit,edu)">edit</mat-icon>
+      </div>
+      <span fxFlex>{{edu.subtitle}}</span>
+      <span fxFlex class="place">{{edu.place}}</span>
+      <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="20px">
+        <span class="start-date">{{edu.startedDate | date}}</span>
+        <span class="end-date" *ngIf="edu.endDate">{{edu.endDate | date}}</span>
+      </div>
+      <span fxFlex class="city">{{edu.city}}</span>
     </div>
-    <hr />
+  </div>
 </div>
